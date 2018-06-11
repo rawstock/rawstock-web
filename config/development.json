@@ -1,0 +1,7 @@
+{
+  "isDebug": true,
+  "app": {
+    "port": 8088,
+    "publicPath": "/__static/"
+  }
+}

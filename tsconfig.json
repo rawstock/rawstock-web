@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "es2017",
+    "module": "commonjs",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "jsx": "react",
+    "paths": {
+      "@lib/*": ["lib/*"],
+      "@server/*": ["server/*"],
+      "@client/*": ["client/*"],
+      "@h5/*": ["client/views/H5/*"],
+      "@utils/*": ["client/utils/*"],
+      "@stores/*": ["client/stores/*"],
+    },
+    "typeRoots": ["server/types", "client/types", "node_modules/@types"],
+    "lib": ["dom", "esnext"]
+  },
+  "include": ["server/**/*", "lib/**/*", "client/**/*"],
+  "exclude": ["server/**/*.test.ts"]
+}

@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    meta(http-equiv="content-type" content="text/html; charset=UTF-8")
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover")
+    meta(name="renderer" content="webkit")
+    link(rel="shortcut icon" href="/favicon.ico?v=3")
+    title #{title ? `${title} | ` : ''}
+    each style in css
+      link(
+        rel="stylesheet"
+        href=style
+      )
+  body
+    div(
+      id="app"
+    ) !{html}
+    script.
+      window._appState = !{JSON.stringify(appState)};
+    each script in js
+      script(
+        src=script
+      )
